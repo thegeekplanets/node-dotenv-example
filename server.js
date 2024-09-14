@@ -6,7 +6,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.json({
     API_URL: process.env.API_URL,
     APP_NAME: process.env.APP_NAME,
@@ -16,5 +16,5 @@ app.get("/api", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode`);
-  console.log(`API URL: ${process.env.API_URL}`);
+  console.log(`Listening on port http://localhost:${PORT}`);
 });
